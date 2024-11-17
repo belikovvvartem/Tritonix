@@ -113,7 +113,7 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    padding-bottom: 30px;
+    padding-bottom: 5px;
     position: relative;
     color: var(--color-text-white);
     font-family: Roboto;
@@ -129,7 +129,7 @@ nav ul li a::after {
     display: block;
     width: 0;
     height: 3px;
-    background: var(--color-basic-blue);
+    background: var(--color-basic-white);
     transition: width 0.3s ease, left 0.3s ease;
     position: absolute;
     bottom: 0;
