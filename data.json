@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Landing Page",
+        "price": "від 1000 грн",
+        "terms": "Терміни: 5-7 днів",
+        "description": "Проста односторінкова презентація товару чи послуги.",
+        "link": "./additionally/order-form.html"
+    },
+    {
+        "title": "Корпоративний сайт",
+        "price": "від 2500 грн",
+        "terms": "Терміни: 10-15 днів",
+        "description": "Інформаційний сайт для вашого бізнесу.",
+        "link": "./additionally/order-form.html"
+    },
+    {
+        "title": "Сайт-візитка",
+        "price": "від 1500 грн",
+        "terms": "Терміни: 3-5 днів",
+        "description": "Мінімалістичний сайт для малого бізнесу.",
+        "link": "./additionally/order-form.html"
+    },
+    {
+        "title": "Блог",
+        "price": "від 2500 грн",
+        "terms": "Терміни: 7-10 днів",
+        "description": "Платформа для публікацій і статей.",
+        "link": "./additionally/order-form.html"
+    },
+    {
+        "title": "E-commerce сайт",
+        "price": "від 5000 грн",
+        "terms": "Терміни: 15-20 днів",
+        "description": "Інтернет-магазин для продажу товарів онлайн.",
+        "link": "./additionally/order-form.html"
+    },
+    {
+        "title": "Індивідуальний проєкт",
+        "price": "від 7000 грн",
+        "terms": "Терміни: за домовленістю",
+        "description": "Сайт під ваші конкретні вимоги.",
+        "link": "./additionally/order-form.html"
+    }
+]

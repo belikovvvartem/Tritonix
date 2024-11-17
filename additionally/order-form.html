@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tritonix</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="otder.css">
+    <link rel="shortcut icon" href="../src/img/favicon/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <h1 class="order-title">Обговоримо ваш проєкт</h1>
+    <h5 class="order-description">Заповніть форму, після чого з вами зв'яжеться спеціаліст.</h5>
+    <a href="../index.html"><button type="button" class="close-order" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button></a>
+
+    <section id="order-form">
+        <form id="orderForm">
+            <div class="input-top">
+                <input type="text" id="name" name="name" placeholder="Ваше ім'я*" required>
+
+                <input type="email" id="email" name="email" placeholder="Ваш email*" required>
+
+                <input type="tel" id="phone" name="phone" placeholder="+380123456789" required>
+
+                <input type="text" id="website" name="website" placeholder="Вебсайт компанії">
+
+                <input type="text" id="situation" name="situation" placeholder="Додайте опис">
+
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Оберіть послугу</option>
+                    <option value="landing">Розробка Landing Page</option>
+                    <option value="corporate">Розробка корпоративного сайту</option>
+                    <option value="ecommerce">E-commerce сайт</option>
+                    <option value="seo">SEO-оптимізація</option>
+                    <option value="other">Інше</option>
+                </select>
+
+                <input type="file" name="file" class="file-order" id="file" />
+                <div class="input-file">
+                <div class="img-add-file">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAP9JREFUSEvd1LErRWEYx/HvdyIpq1EpjAw2g8GuTGKxWSR/wrXd0WJgs8holEU2i7r/gUHJaJAy6Ode3XQT97wd3bqc9Tm/z3ne5+08MqDHAbkMB5xkXH0uOWVxx0nW2mADWFRfq/AiOMkccAuMAafq5q/hJBNddLoH21EP++F9O07SqV8CK1+QN2BJvfkJr4JngI1ueB2YBY6AR+BBPa4F94aSnAOrwILaKppxkkngDGipe9+FquB2fR44AC7U5scokkwBd8C1ulwT7uSugBN16x/DVZeVpN4ohg4eBZ6AkarOCuoNdf/zz+tur92CYL9X7oFt9aVou9X52N+D3wGIUooXUuRbGQAAAABJRU5ErkJggg=="/>
+                </div>
+                <div class="file-text">Додати файл</div>
+            </div>
+<div class="order-bottom">
+            <span class="personal-data">Натискаючи кнопку “Надіслати”, ви <br> погоджуєтесь з<a href="./privacy-policy-uk.html" target="_blank" rel="noopener noreferrer"> Правилами обробки <br> персональних даних.</a></span>
+            <button type="button" onclick="submitOrder()">Замовити</button>
+            </div>
+        </form>
+        <video muted playsinline autoplay loop class="order-video" src="../src/video/video-order.mp4"></video>
+    </section>
+
+    <script src="./order.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tritonix</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../src/img/favicon/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+        <img src="../src/img/favicon/favicon.png" alt="" class="header-foto">
+        <a href="../index.html"><div class="header-title">TRITONIX</div></a>
+    </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="../price.html">Послуги</a></li>
+                <li><a href="./calculator.html">Калькулятор</a></li>
+                <li><a href="./portfolio.html">Портфоліо</a></li>
+                <li><a href="./about-us.html">Про нас</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </nav>
+        <div class="language"><a href="#">Ua</a><span><a href="#">Eng</a></span></div>
+    </header>
+    <a href="../index.html" target="_blank"><button class="header-button-home">Головна</button></a>
+
+
+<hr class="header-line">
+
+<section id="price-calculator">
+    <h1 class="calculator-title">Розрахунок ціни на сайт:</h1>
+    <form id="calculatorForm">
+        <div class="select-enter">
+        <label class="label-select-enter">Тип сайту:</label>
+        <select id="siteType">
+            <option value="1000">Landing Page</option>
+            <option value="2500">Корпоративний сайт</option>
+            <option value="1500">Сайт-візитка</option>
+            <option value="2500">Блог</option>
+        </select>
+
+        <label class="label-select-enter">Кількість сторінок:</label>
+        <input type="number" id="pageCount" min="1" value="1">
+</div>
+        <label>Додаткові функції:</label>
+        <div class="options">
+        <div class="option">
+            <input type="checkbox" id="responsiveDesign" value="300" class="option-input">
+            <label for="responsiveDesign" class="option-label">Адаптивний дизайн</label>
+        </div>
+        <div class="option">
+            <input type="checkbox" id="domainConnection" value="200" class="option-input">
+            <label for="domainConnection" class="option-label">Підключення домену</label>
+        </div>
+        <div class="option">
+            <input type="checkbox" id="hosting" value="500" class="option-input">
+            <label for="hosting" class="option-label">Хостинг</label>
+        </div>
+        <div class="option">
+            <input type="checkbox" id="googleAnalytics" value="200" class="option-input">
+            <label for="googleAnalytics" class="option-label">Інтеграція з Google Analytics</label>
+        </div>
+        <div class="option">
+            <input type="checkbox" id="contactForm" class="option-input" value="200" class="option-input">
+            <label for="contactForm" class="option-label">Форма зворотного зв'язку</label>
+        </div>
+        <div class="option">
+            <input type="checkbox" id="loginForm" class="option-input" value="200" class="option-input">
+            <label for="loginForm" class="option-label">Форма реєстрації</label>
+        </div>
+</div>
+<div class="price-calculator">
+        <button class="button-calculator" type="button" onclick="calculatePrice()">Розрахувати ціну</button>
+    </form>
+    <h3 class="totalPrice">Приблизна ціна: <span id="totalPrice">0</span> грн</h3>
+    </div>
+</section>
+
+<script src="../script.js"></script>
+</body>
+</html>
