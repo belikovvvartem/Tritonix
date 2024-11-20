@@ -1,3 +1,13 @@
+document.querySelectorAll('.nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+})
+
 function calculatePrice() {
     const siteType = parseInt(document.getElementById('siteType').value);
     const pageCount = parseInt(document.getElementById('pageCount').value);
