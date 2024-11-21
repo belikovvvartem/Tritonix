@@ -29,6 +29,7 @@ body {
     color: var(--color-basic-white);
     overflow-x: hidden;
     user-select: none;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -497,14 +498,9 @@ label {
     align-items: center;
 }
 
-.home-order .order-title {
-    margin-left: -150px;
-}
-
-
 .home-order .order-description {
-    margin-top: -50px;
-    margin-left: -350px;
+    margin-top: -35px;
+    margin-left: -10px;
 }
 
 #order-form {
