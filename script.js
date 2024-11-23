@@ -24,7 +24,8 @@ function calculatePrice() {
 
 /*portfolio*/
 // Завантаження даних із JSON
-fetch("../projects.json") // Вказуємо шлях до JSON
+fetch("/projects.json")
+ // Вказуємо шлях до JSON
     .then((response) => response.json())
     .then((data) => {
         // Відображення останніх 3 робіт на головній сторінці
