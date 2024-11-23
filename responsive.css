@@ -1,6 +1,6 @@
 @media screen and (max-width: 799px) {
     :root {
-        overflow: hidden;
+        overflow-x: hidden;
     }
     
     body {

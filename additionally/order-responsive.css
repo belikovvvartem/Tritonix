@@ -1,4 +1,8 @@
 @media screen and (max-width: 799px) {
+    :root {
+        overflow-x: hidden;
+    }
+    
     body {
         width: 100%;
         max-width: 799px;
