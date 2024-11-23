@@ -1,9 +1,10 @@
 @media screen and (max-width: 799px) {
     body {
         width: 100%;
-        max-width: 899px;
+        max-width: 799px;
         margin: 0 auto;
         padding: 20px;
+        overflow-x: hidden;
     }
 
     h1 {
