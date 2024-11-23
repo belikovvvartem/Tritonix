@@ -1,15 +1,15 @@
 [
     {
-        "image": "src/img/portfolio/portfolio-color-rawe.jpg",
         "title": "NIKE",
         "description": "Для продажу кастомізованих кросівок Nike. ",
-        "link": ""
+        "image": "src/img/portfolio/portfolio-color-rawe.jpg",
+        "link": "https://chatgpt.com/c/6741e6a2-9f94-8012-94da-97ed477909f8"
     },
     {
         "image": "src/img/portfolio/portfolio-desing-agency.jpg",
         "title": "Desing Agency",
         "description": "Це опис проєкту 2",
-        "link": "additional-pages/project2.html"
+        "link": "https://example.com/project1"
     },
     {
         "image": "src/img/portfolio/portfolio-webstudio.jpg",
