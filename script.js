@@ -24,7 +24,7 @@ function calculatePrice() {
 
 /*portfolio*/
 // Завантаження даних із JSON
-fetch("/projects.json")
+fetch("/Tritonix/projects.json")
  // Вказуємо шлях до JSON
     .then((response) => response.json())
     .then((data) => {
