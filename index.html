@@ -19,7 +19,8 @@
                 <div class="header-title">TRITONIX</div>
             </a>
         </div>
-        <nav>
+        
+        <nav class="overlay" id="menuOverlay">
             <ul>
                 <li><a href="./index.html">Головна</a></li>
                 <li><a href="./price.html">Послуги</a></li>
@@ -30,7 +31,8 @@
             </ul>
         </nav>
         <div class="language"><a href="#">Ua</a><span><a href="#">Eng</a></span></div>
-
+        
+        <button class="menu-toggle" id="menuToggle">☰</button>
     </header>
 
     <main>
@@ -86,9 +88,10 @@
                     <option value="1500">Сайт-візитка</option>
                     <option value="2500">Блог</option>
                 </select>
-
+<div class="pages">
                 <label class="label-select-enter">Кількість сторінок:</label>
                 <input type="number" id="pageCount" min="1" value="1">
+            </div>
             </div>
             <label>Додаткові функції:</label>
             <div class="options">

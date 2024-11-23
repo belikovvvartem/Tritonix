@@ -24,38 +24,31 @@ function calculatePrice() {
 
 /*portfolio*/
 // Завантаження даних із JSON
-fetch("/projects.json")
- // Вказуємо шлях до JSON
-    .then((response) => response.json())
-    .then((data) => {
-        // Відображення останніх 3 робіт на головній сторінці
-        if (document.querySelector("#latest-projects")) {
-            const latestProjects = data.slice(-3).reverse(); // Беремо останні три
-            renderProjects("#latest-projects", latestProjects, "./");
-        }
+const jsonPaths = ["/projects.json", "/Tritonix/projects.json"];
 
-        // Відображення всіх робіт на сторінці портфоліо
-        if (document.querySelector("#all-projects")) {
-            renderProjects("#all-projects", data, "../");
-        }
-    });
+jsonPaths.forEach((path) => {
+    fetch(path)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`Failed to load: ${path}`);
+            }
+            return response.json();
+        })
+        .then((data) => {
+            // Для головної сторінки
+            if (document.querySelector("#latest-projects")) {
+                const latestProjects = data.slice(-3).reverse(); // Останні 3 проєкти
+                renderProjects("#latest-projects", latestProjects, "./");
+            }
 
-    //For GitHub
-    fetch("/Tritonix/projects.json")
- // Вказуємо шлях до JSON
-    .then((response) => response.json())
-    .then((data) => {
-        // Відображення останніх 3 робіт на головній сторінці
-        if (document.querySelector("#latest-projects")) {
-            const latestProjects = data.slice(-3).reverse(); // Беремо останні три
-            renderProjects("#latest-projects", latestProjects, "./");
-        }
+            // Для сторінки портфоліо
+            if (document.querySelector("#all-projects")) {
+                renderProjects("#all-projects", data, "../");
+            }
+        })
+        .catch((error) => console.error(error.message));
+});
 
-        // Відображення всіх робіт на сторінці портфоліо
-        if (document.querySelector("#all-projects")) {
-            renderProjects("#all-projects", data, "../");
-        }
-    });
 
 // Функція для створення HTML-структури з посиланням та іконкою стрілки
 function renderProjects(containerId, projectList) {
@@ -75,3 +68,29 @@ function renderProjects(containerId, projectList) {
     ).join('');
     container.innerHTML = projectsHTML;
 }
+
+const menuToggle = document.getElementById('menuToggle');
+const menuOverlay = document.getElementById('menuOverlay');
+
+// Відкривання/закривання меню
+menuToggle.addEventListener('click', () => {
+  const isOpen = menuOverlay.classList.toggle('show');
+  menuToggle.textContent = isOpen ? '✖' : '☰'; // Зміна тексту кнопки
+});
+
+// Закриття меню при кліку на фон
+menuOverlay.addEventListener('click', (e) => {
+  if (e.target === menuOverlay) {
+    menuOverlay.classList.remove('show');
+    menuToggle.textContent = '☰';
+  }
+});
+
+// Закриття меню при виборі посилання
+menuOverlay.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuOverlay.classList.remove('show');
+    menuToggle.textContent = '☰';
+  });
+});
+

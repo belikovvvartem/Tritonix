@@ -190,6 +190,10 @@ nav a:hover {
     color: var(--color-basic-blue);
 }
 
+.menu-toggle {
+    display: none;
+}
+
 .hero {
     position: relative;
     display: flex;

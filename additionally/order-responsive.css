@@ -91,3 +91,30 @@
         left: 0;
     }
 }
+
+@media screen and (min-width: 800px) and (max-width: 1440px) {
+    :root {
+        overflow-x: hidden;
+    }
+    
+    body {
+        width: 100%;
+        max-width: 1440px;
+        height: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    .personal-data {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .order-video {
+        right: -300px;
+    }
+
+}

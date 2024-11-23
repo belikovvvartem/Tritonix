@@ -2,7 +2,7 @@
     :root {
         overflow-x: hidden;
     }
-    
+
     body {
         width: 100%;
         max-width: 799px;
@@ -33,6 +33,82 @@
 
     header nav {
         display: none;
+    }
+
+    .header-foto {
+        display: none;
+    }
+    .language {
+        margin-right: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        right: 0;
+        top: -45px;
+        font-size: 24px;
+        width: 54px;
+        height: 54px;
+        background: none;
+        border: 1px solid var(--color-basic-white);
+        box-shadow: none;
+        color: #fff;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba( 255, 255, 255, 0.1 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 20px );
+        -webkit-backdrop-filter: blur( 20px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .overlay.show {
+        display: flex;
+        align-items: start;
+        padding: 25px;
+    }
+
+    .overlay ul {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .overlay ul li {
+        margin: 20px 0;
+    }
+
+    .overlay ul li a {
+        color: #fff;
+        font-size: 24px;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .overlay ul li a:hover {
+        color: #1e90ff;
     }
 
     .price {
@@ -212,311 +288,215 @@
 
 }
 
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    :root {
+        overflow-x: hidden;
+    }
 
-
-
-
-
-
-
-/*
-
-@media screen and (min-width: 800px) and (max-width: 1440px) {
     body {
         width: 100%;
-        max-width: 899px;
+        max-width: 1440px;
         margin: 0 auto;
+        padding: 20px;
+        overflow-x: hidden;
     }
 
-    .container {
-        width: 100%;
-        margin: 0 auto;
+    h1 {
+        font-family: "Arsenal SC", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 45px;
     }
 
-    header {
-        width: 100%;
-        max-width: 899px;
-        margin: 0 auto;
-    }
-
-    .header-nav ul {
-        display: flex;
-        flex-direction: column;
-        margin-right: -50px;
-    }
-
-    .header-nav ul li {
-        margin-right: 0;
-    }
-
-    .logo-header {
-        margin: 35px;
-    }
-
-    .header-language {
-        display: flex;
-        margin-right: 20px;
-        gap: 5px;
-        width: 75px;
-    }
-
-    .menu-button {
-        display: block;
-        color: white;
-        text-align: center;
-        cursor: pointer;
-        margin-right: 35px;
-    }
-
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .modal-content {
-        background-color: #012D63;
-        margin: 8% auto;
-        padding: 20px 0;
-        border: 1px solid #888;
-        border-radius: 15px;
-        width: 80%;
-    }
-
-    .close {
-        margin-left: 25px;
-        position: absolute;
-        color: white;
-        font-size: 35px;
-    }
-
-    .hero-section {
-        width: 100%;
-        height: 500px;
-        gap: 5px;
-    }
-
-    .hero-logo-name {
-        margin-left: 35px;
-    }
-
-    .hero-logo-img {
-        margin-left: 20px;
-        margin-top: 35px;
-    }
-
-    .hero-tittle {
-        margin-top: -31px;
-        margin-left: 35px;
-        font-size: 44px;
-    }
-
-    .hero-h1 {
-        margin-top: 1px;
-        margin-left: 35px;
-        font-size: 24px;
-    }
-
-    .hero-p {
-        margin-left: 35px;
-        font-size: 15px;
-    }
-
-    .hero-button {
-        width: 180px;
-        height: 47px;
-        font-size: 18px;
-        margin-top: 28px;
-        margin-left: 35px;
-    }
-
-    .our-advantages {
-        width: 100%;
-        max-width: 899px;
-        margin: 0 auto;
-        height: 300px;
-    }
-
-    .advantages {
-        width: 90%;
-        height: 200px;
-        border: 5px solid var(--button-color);
-    }
-
-    .advantage h3 {
+    h3 {
+        font-family: "Arsenal SC", sans-serif;
+        font-weight: 400;
+        font-style: normal;
         font-size: 25px;
     }
 
-    .advantage img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .advantages-line {
-        margin: 5px;
-        width: 1px;
-        height: 150px;
-    }
-
-    .reviews-section {
+    header {
         width: 100%;
         max-width: 899px;
         margin: 0 auto;
     }
 
-    .reviews-slider {
-        position: relative;
-        display: flex;
-        align-items: center;
+    header nav {
+        display: none;
     }
 
-    .reviews-wrapper {
-        width: 100%;
-        height: 450px;
-        max-width: 786px;
+    .language {
+        margin-right: 70px;
     }
 
-    .reviews-inner {
-        display: flex;
-        margin-top: 15px;
-        transition: transform 0.5s ease-in-out;
-        width: 345%;
+    .menu-toggle {
+        display: block;
     }
 
-    .review-card {
-        display: flex;
-        text-align: start;
-        flex-direction: column;
-        background-size: cover;
-        padding: 20px;
-        width: 255px;
-        height: 292px;
-        flex-shrink: 0;
-        border-radius: 15px;
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    #prev-button,
-    #next-button {
-        background: rgba(255, 255, 255, 0.35);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        backdrop-filter: blur(3.5px);
-        -webkit-backdrop-filter: blur(3.5px);
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
+    .menu-toggle {
+        position: absolute;
+        right: 0;
+        top: -45px;
+        font-size: 24px;
+        width: 54px;
+        height: 54px;
+        background: none;
+        border: 1px solid var(--color-basic-white);
+        box-shadow: none;
         color: #fff;
         cursor: pointer;
-        position: absolute;
-        transform: translateY(-50%);
-        z-index: 10;
+        z-index: 1100;
     }
 
-    #prev-button {
-        left: 180px;
-    }
-
-    #next-button {
-        right: 180px;
-    }
-
-    #prev-button,
-    #next-button {
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        display: flex;
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba( 255, 255, 255, 0.1 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 20px );
+        -webkit-backdrop-filter: blur( 20px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        display: none;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        z-index: 1000;
+    }
+
+    .overlay.show {
+        display: flex;
+        align-items: start;
+        padding: 25px;
+    }
+
+    .overlay ul {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .overlay ul li {
+        margin: 20px 0;
+    }
+
+    .overlay ul li a {
+        color: #fff;
+        font-size: 24px;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .overlay ul li a:hover {
+        color: #1e90ff;
+    }
+
+    .hero video {
+        left: 100px;
+    }
+
+    .price {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .price-cards {
+        display: flex;
         justify-content: center;
     }
 
-    .order-section {
-        width: 100%;
-        margin: 0 auto;
+    .pages {
+        margin-top: 20px;
+    }
+
+    .portfolio-example {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .example {
+        position: relative;
+        margin-top: 50px;
+    }
+
+    .example-foto {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        transition: border-radius 0.3s ease;
     }
 
     footer {
-        width: 100%;
-        margin: 0 auto;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 100px;
+        padding: 0 20px;
+        height: 600px;
     }
 
-    .contact-info {
+    .footer-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 400px;
+    }
+
+    .footer-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: -30px;
+    }
+
+    .footer-nav ul li a {
+        font-size: 20px;
+    }
+
+    .footer-nav ul li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-order {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+
+    .footer-center {
+        width: 100%;
         display: flex;
         justify-content: center;
-        font-size: 10px;
-        width: 800px;
+        align-items: center;
+        height: 60px;
+        margin-top: -40px;
     }
 
-
-    .contact-item a {
-        margin-left: 0;
-    }
-
-    .contact-item {
-        display: flex;
-        justify-content: space-between;
-        width: 750px;
-    }
-
-    .footer-line {
-        width: 750px;
+    .footer-center a {
+        text-decoration: none;
+        color: var(--color-basic-white);
+        font-size: 20px;
+        font-family: 'M PLUS 1p', sans-serif;
+        font-weight: 500;
     }
 
     .footer-bottom {
-        width: 750px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
-    .scroll-button {
-        bottom: 10px;
-        right: 10px;
-    }
-}
-
-@media screen and (min-width: 1441px) {
-    .container {
-        width: 100%;
-    }
-
-    header {
-        width: 100%;
-    }
-
-    .hero-section {
-        width: 100%;
-        height: 100%;
-        background: url(./src/img/hero/background-hero.png) center / cover no-repeat;
-    }
-
-    .hero-button {
-        margin-bottom: 183px;
-    }
-
-    .our-advantages {
-        width: 100%;
-        height: 100%;
-        padding: 105px 0;
-        background: url(./src/img/advantages/background-advantages.png) center / cover no-repeat;
-    }
-
-    .reviews-section {
-        width: 100%;
-        height: 100%;
-        padding: 0 0 115px 0;
-        background: url(./src/img/reviews/background-reviews.png) center / cover no-repeat;
-    }
-
-    .order-section {
-        width: 100%;
-        height: 100%;
-        background: url(./src/img//order/background-order.png) center / cover no-repeat;
-    }
-
-    footer {
-        width: 100%;
-        height: 100%;
-    }
 }
