@@ -69,6 +69,8 @@ function renderProjects(containerId, projectList) {
     container.innerHTML = projectsHTML;
 }
 
+
+
 const menuToggle = document.getElementById('menuToggle');
 const menuOverlay = document.getElementById('menuOverlay');
 
