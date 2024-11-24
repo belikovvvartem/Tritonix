@@ -22,8 +22,6 @@ function calculatePrice() {
 }
 
 
-/*portfolio*/
-// Завантаження даних із JSON
 const jsonPaths = ["./projects.json", "./Tritonix/projects.json"];
 
 jsonPaths.forEach((path) => {
@@ -35,13 +33,11 @@ jsonPaths.forEach((path) => {
             return response.json();
         })
         .then((data) => {
-            // Для головної сторінки
             if (document.querySelector("#latest-projects")) {
-                const latestProjects = data.slice(-3).reverse(); // Останні 3 проєкти
+                const latestProjects = data.slice(-3).reverse(); 
                 renderProjects("#latest-projects", latestProjects);
             }
 
-            // Для сторінки портфоліо
             if (document.querySelector("#all-projects")) {
                 renderProjects("#all-projects", data);
             }
@@ -49,7 +45,6 @@ jsonPaths.forEach((path) => {
         .catch((error) => console.error(error.message));
 });
 
-// Функція для створення HTML-структури з посиланням та іконкою стрілки
 function renderProjects(containerId, projectList) {
     const container = document.querySelector(containerId);
     if (!container) return;
@@ -68,20 +63,14 @@ function renderProjects(containerId, projectList) {
     container.innerHTML = projectsHTML;
 }
 
-
-
-
-
 const menuToggle = document.getElementById('menuToggle');
 const menuOverlay = document.getElementById('menuOverlay');
 
-// Відкривання/закривання меню
 menuToggle.addEventListener('click', () => {
   const isOpen = menuOverlay.classList.toggle('show');
-  menuToggle.textContent = isOpen ? '✖' : '☰'; // Зміна тексту кнопки
+  menuToggle.textContent = isOpen ? '✖' : '☰'; 
 });
 
-// Закриття меню при кліку на фон
 menuOverlay.addEventListener('click', (e) => {
   if (e.target === menuOverlay) {
     menuOverlay.classList.remove('show');
@@ -89,11 +78,9 @@ menuOverlay.addEventListener('click', (e) => {
   }
 });
 
-// Закриття меню при виборі посилання
 menuOverlay.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     menuOverlay.classList.remove('show');
     menuToggle.textContent = '☰';
   });
 });
-

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tritonix</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" sizes="14×14" href="./11zon_cropped (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="../responsive.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="../src/img/favicon/favicon.png" alt="" class="header-foto">
+            <a href="./index.html">
+                <div class="header-title">TRITONIX</div>
+            </a>
+        </div>
+
+        <nav class="overlay" id="menuOverlay">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./price.html">Services</a></li>
+                <li><a href="./additionally/calculator.html">Calculator</a></li>
+                <li><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./additionally/about-us.html">About Us</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language"><a href="../index.html">Ua</a><span><a href="./index-eng.html">Eng</a></span></div>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-title">We will create your <br> perfect website.</div>
+            <hr class="hero-line">
+            <div class="hero-text">Your idea, our experience — together we will create a website that <br> grabs attention, impresses with its stylish design, and leaves <br> a lasting impression. We will turn your vision <br> into a working tool for your business.</div>
+            <video muted playsinline autoplay loop src="../src/video/hero-section.mp4"></video>
+        </section>
+
+        <section class="price">
+            <h1 class="price-title">Website development cost:</h1>
+            <div class="price-cards" id="price-cards"></div>
+            <a href="../price.html"><button class="price-all-button">More prices</button></a>
+        </section>
+
+        <script>
+            fetch('./data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const priceCardsContainer = document.getElementById('price-cards');
+
+                    // Display first 4 prices
+                    data.slice(0, 4).forEach(item => {
+                        const card = document.createElement('div');
+                        card.classList.add('price-card');
+
+                        card.innerHTML = `
+                        <div class="price-card-title">${item.title}</div>
+                        <div class="price-card-worth">${item.price}</div>
+                        <div class="price-card-term">${item.terms}</div>
+                        <div class="price-card-description">${item.description}</div>
+                        <a href="${item.link}" target="_blank" rel="noopener noreferrer"><button class="price-card-order-button">Order</button></a>
+                    `;
+
+                        priceCardsContainer.appendChild(card);
+                    });
+                });
+        </script>
+
+        <section id="price-calculator">
+            <h1 class="calculator-title">Website price calculation:</h1>
+            <form id="calculatorForm">
+                <div class="select-enter">
+                    <label class="label-select-enter">Website type:</label>
+                    <select id="siteType">
+                        <option value="1000">Landing Page</option>
+                        <option value="2500">Corporate Website</option>
+                        <option value="1500">Business Card Website</option>
+                        <option value="2500">Blog</option>
+                    </select>
+                    <div class="pages">
+                        <label class="label-select-enter">Number of pages:</label>
+                        <input type="number" id="pageCount" min="1" value="1">
+                    </div>
+                </div>
+                <label>Additional features:</label>
+                <div class="options">
+                    <div class="option">
+                        <input type="checkbox" id="responsiveDesign" value="300" class="option-input">
+                        <label for="responsiveDesign" class="option-label">Responsive Design</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="domainConnection" value="200" class="option-input">
+                        <label for="domainConnection" class="option-label">Domain Connection</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="hosting" value="500" class="option-input">
+                        <label for="hosting" class="option-label">Hosting</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="googleAnalytics" value="200" class="option-input">
+                        <label for="googleAnalytics" class="option-label">Google Analytics Integration</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="contactForm" class="option-input" value="200" class="option-input">
+                        <label for="contactForm" class="option-label">Contact Form</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="loginForm" class="option-input" value="200" class="option-input">
+                        <label for="loginForm" class="option-label">Registration Form</label>
+                    </div>
+                </div>
+
+                <button class="button-calculator" type="button" onclick="calculatePrice()">Calculate price</button>
+            </form>
+            <h3 class="totalPrice">Approximate price: <span id="totalPrice">0</span> UAH</h3>
+        </section>
+
+        <section class="latest-portfolio">
+            <h1>Latest Works:</h1>
+            <div class="portfolio-example" id="latest-projects">
+                <!-- Projects will be dynamically added here -->
+            </div>
+            <a href="./portfolio.html"><button class="view-all">View all works</button></a>
+        </section>
+
+        <section id="about-us">
+            <div class="container">
+                <h1>About Us:</h1>
+                <h4>TRITONIX Studio is a team of professionals specializing in modern website development with a focus on quality, efficiency, and an individualized approach to each project. We create web resources using the latest technologies: HTML, CSS, and JavaScript. Our goal is to make your website not only beautiful but also user-friendly, fast, and responsive on all devices.</h4>
+
+                <h3>Why choose us?</h3>
+                <h4>By choosing TRITONIX, you get a team that works for results. We don’t just create websites; we create digital solutions that help you achieve your goals. Our developers have a deep understanding of modern web technologies and constantly follow the latest trends in web design and programming. We strive to provide the best experience for our clients, paying attention to every detail at each stage of the project, from layout to final testing.</h4>
+
+                <h4>Our core values are reliability, professionalism, and speed of execution. We are always open to feedback and aim to create solutions that fully meet your needs and wishes. We value your time and resources, which is why we work efficiently and responsibly at every stage of website creation.</h4>
+
+                <h3>Work stages:</h3>
+                <ol>
+                    <li><strong><span>01</span> Submit a request:</strong> You send us a request through the form on the website or contact us directly.</li>
+                    <li><strong><span>02</span> Project discussion:</strong> We thoroughly discuss your requirements and wishes to understand how your website should look.</li>
+                    <li><strong><span>03</span> Development and testing:</strong> Our specialists develop the site, test it on different devices, and ensure its stable performance.</li>
+                    <li><strong><span>04</span> Payment:</strong> After approving the results, we send you the invoice for payment.</li>
+                    <li><strong><span>05</span> Project transfer:</strong> After receiving payment, we transfer the finished site to you and provide instructions for its use.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="order-form" class="home-order">
+            <h1 class="order-title">Let’s discuss your project</h1>
+            <h5 class="order-description">Fill out the form, and a specialist will contact you.</h5>
+            <video muted playsinline autoplay loop class="home-video-order" src="../src/video/video-order.mp4"></video>
+            <form id="orderForm">
+                <div class="input-top">
+                    <input type="text" id="name" name="name" placeholder="Your name*" required>
+
+                    <input type="email" id="email" name="email" placeholder="Your email*" required>
+
+                    <input type="tel" id="phone" name="phone" placeholder="+380123456789" required>
+
+                    <input type="text" id="website" name="website" placeholder="Company website">
+
+                    <input type="text" id="situation" name="situation" placeholder="Add a description">
+
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Choose a service</option>
+                        <option value="landing">Landing Page development</option>
+                        <option value="corporate">Development of a corporate website</option>
+                        <option value="ecommerce">E-commerce site</option>
+                        <option value="seo">SEO optimization</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <input type="file" name="file" class="file-order" id="file" />
+                    <div class="input-file">
+                        <div class="img-add-file">
+                            <img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAP9JREFUSEvd1LErRWEYx/HvdyIpq1EpjAw2g8GuTGKxWSR/wrXd0WJgs8holEU2i7r/gUHJaJAy6Ode3XQT97wd3bqc9Tm/z3ne5+08MqDHAbkMB5xkXH0uOWVxx0nW2mADWFRfq/AiOMkccAuMAafq5q/hJBNddLoH21EP++F9O07SqV8CK1+QN2BJvfkJr4JngI1ueB2YBY6AR+BBPa4F94aSnAOrwILaKppxkkngDGipe9+FquB2fR44AC7U5scokkwBd8C1ulwT7uSugBN16x/DVZeVpN4ohg4eBZ6AkarOCuoNdf/zz+tur92CYL9X7oFt9aVou9X52N+D3wGIUooXUuRbGQAAAABJRU5ErkJggg==" />
+                        </div>
+                        <div class="file-text">Add file</div>
+                    </div>
+                    <div class="order-bottom">
+                        <span class="personal-data" id="home-personal-data">By pressing the "Send" button, you <br> agree with<a
+                                href="./additionally-eng/privacy-policy-eng.html" target="_blank" rel="noopener noreferrer">
+                                Processing rules <br> personal data.</a></span>
+                        <button id="home-order-button" type="button" onclick="submitOrder()">Order</button>
+                    </div>
+            </form>
+        </section>
+        <div class="social-bottom">
+            <a href="https://t.me/Tritonix_Bot" target="_blank" rel="noopener noreferrer"><img
+                    src="../src/img/social/telegram-bot.png" alt="bot" class="telegram-bot"></a>
+            <a href="https://www.instagram.com/tritonix.studio/profilecard/?igsh=MXhybjA4ZDVueDNhcw==" target="_blank"
+                rel="noopener noreferrer"><img src="../src/img/social/instagram-icon.png" alt="bot"
+                    class="instagram"></a>
+            <a href="https://www.tiktok.com/@tritonix.it?is_from_webapp=1&sender_device=pc" target="_blank"
+                rel="noopener noreferrer"><img src="../src/img/social/tiktok-icon.png" alt="bot" class="tiktok"></a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <a href="./index.html">
+                <div class="header-title" id="footer-title">TRITONIX</div>
+            </a>
+            <nav class="footer-nav" id="Contact">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./price.html">Services</a></li>
+                    <li><a href="./additionally/calculator.html">Calculator</a></li>
+                    <li><a href="./portfolio.html">Portfolio</a></li>
+                    <li><a href="./additionally/about-us.html">About Us</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="./additionally/order-form.html" target="_blank"><button class="footer-order">Keep
+                application</button></a>
+        </div>
+
+        <div class="footer-center">
+            <a href="mailto:support@tritonix.com">support@tritonix.com</a>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 — Tritonix.com.ua</p>
+            <a href="./additionally-eng/privacy-policy-eng.html">
+                <p>Privacy Policy</p>
+            </a>
+        </div>
+    </footer>
+
+    <script src="../additionally/order.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

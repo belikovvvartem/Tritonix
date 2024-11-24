@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" sizes="14×14" href="./11zon_cropped (1).png" type="image/x-icon">
     <link rel="stylesheet" href="responsive.css">
-
 </head>
 
 <body>
@@ -19,7 +18,7 @@
                 <div class="header-title">TRITONIX</div>
             </a>
         </div>
-        
+
         <nav class="overlay" id="menuOverlay">
             <ul>
                 <li><a href="./index.html">Головна</a></li>
@@ -30,40 +29,40 @@
                 <li><a href="#Contact">Контакти</a></li>
             </ul>
         </nav>
-        <div class="language"><a href="#">Ua</a><span><a href="#">Eng</a></span></div>
-        
+        <div class="language"><a href="./index.html">Ua</a><span><a href="./English Version/index-eng.html">Eng</a></span></div>
+
         <button class="menu-toggle" id="menuToggle">☰</button>
     </header>
 
     <main>
 
-    <section class="hero">
-        <div class="hero-title">Створимо ваш <br> ідеальний сайт.</div>
-        <hr class="hero-line">
-        <div class="hero-text">Ваша ідея, наш досвід — разом ми створимо сайт, <br> який приверне увагу, вразить
-            стильним дизайном та залишить <br> незабутнє враження. Ми перетворимо ваше бачення <br> у працюючий
-            інструмент для вашого бізнесу.</div>
-        <video muted playsinline autoplay loop src="./src/video/hero-section.mp4"></video>
-    </section>
+        <section class="hero">
+            <div class="hero-title">Створимо ваш <br> ідеальний сайт.</div>
+            <hr class="hero-line">
+            <div class="hero-text">Ваша ідея, наш досвід — разом ми створимо сайт, <br> який приверне увагу, вразить
+                стильним дизайном та залишить <br> незабутнє враження. Ми перетворимо ваше бачення <br> у працюючий
+                інструмент для вашого бізнесу.</div>
+            <video muted playsinline autoplay loop src="./src/video/hero-section.mp4"></video>
+        </section>
 
-    <section class="price">
-        <h1 class="price-title">Вартість розробки сайтів:</h1>
-        <div class="price-cards" id="price-cards"></div>
-        <a href="./price.html"><button class="price-all-button">Більше тарифів</button></a>
-    </section>
+        <section class="price">
+            <h1 class="price-title">Вартість розробки сайтів:</h1>
+            <div class="price-cards" id="price-cards"></div>
+            <a href="./price.html"><button class="price-all-button">Більше тарифів</button></a>
+        </section>
 
-    <script>
-        fetch('./data.json')
-            .then(response => response.json())
-            .then(data => {
-                const priceCardsContainer = document.getElementById('price-cards');
+        <script>
+            fetch('./data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const priceCardsContainer = document.getElementById('price-cards');
 
-                // Виводимо перші 4 тарифи
-                data.slice(0, 4).forEach(item => {
-                    const card = document.createElement('div');
-                    card.classList.add('price-card');
+                    // Виводимо перші 4 тарифи
+                    data.slice(0, 4).forEach(item => {
+                        const card = document.createElement('div');
+                        card.classList.add('price-card');
 
-                    card.innerHTML = `
+                        card.innerHTML = `
                         <div class="price-card-title">${item.title}</div>
                         <div class="price-card-worth">${item.price}</div>
                         <div class="price-card-term">${item.terms}</div>
@@ -71,160 +70,165 @@
                         <a href="${item.link}" target="_blank" rel="noopener noreferrer"><button class="price-card-order-button">Замовити</button></a>
                     `;
 
-                    priceCardsContainer.appendChild(card);
+                        priceCardsContainer.appendChild(card);
+                    });
                 });
-            });
-    </script>
+        </script>
 
 
-    <section id="price-calculator">
-        <h1 class="calculator-title">Розрахунок ціни на сайт:</h1>
-        <form id="calculatorForm">
-            <div class="select-enter">
-                <label class="label-select-enter">Тип сайту:</label>
-                <select id="siteType">
-                    <option value="1000">Landing Page</option>
-                    <option value="2500">Корпоративний сайт</option>
-                    <option value="1500">Сайт-візитка</option>
-                    <option value="2500">Блог</option>
-                </select>
-<div class="pages">
-                <label class="label-select-enter">Кількість сторінок:</label>
-                <input type="number" id="pageCount" min="1" value="1">
-            </div>
-            </div>
-            <label>Додаткові функції:</label>
-            <div class="options">
-                <div class="option">
-                    <input type="checkbox" id="responsiveDesign" value="300" class="option-input">
-                    <label for="responsiveDesign" class="option-label">Адаптивний дизайн</label>
-                </div>
-                <div class="option">
-                    <input type="checkbox" id="domainConnection" value="200" class="option-input">
-                    <label for="domainConnection" class="option-label">Підключення домену</label>
-                </div>
-                <div class="option">
-                    <input type="checkbox" id="hosting" value="500" class="option-input">
-                    <label for="hosting" class="option-label">Хостинг</label>
-                </div>
-                <div class="option">
-                    <input type="checkbox" id="googleAnalytics" value="200" class="option-input">
-                    <label for="googleAnalytics" class="option-label">Інтеграція з Google Analytics</label>
-                </div>
-                <div class="option">
-                    <input type="checkbox" id="contactForm" class="option-input" value="200" class="option-input">
-                    <label for="contactForm" class="option-label">Форма зворотного зв'язку</label>
-                </div>
-                <div class="option">
-                    <input type="checkbox" id="loginForm" class="option-input" value="200" class="option-input">
-                    <label for="loginForm" class="option-label">Форма реєстрації</label>
-                </div>
-            </div>
-
-            <button class="button-calculator" type="button" onclick="calculatePrice()">Розрахувати ціну</button>
-        </form>
-        <h3 class="totalPrice">Приблизна ціна: <span id="totalPrice">0</span> грн</h3>
-        </div>
-    </section>
-
-    <section class="latest-portfolio">
-        <h1>Останні роботи:</h1>
-        <div class="portfolio-example" id="latest-projects">
-            <!-- Сюди будуть динамічно додані роботи -->
-        </div>
-        <a href="./portfolio.html"><button class="view-all"></b>Переглянути всі роботи</button></a>
-    </section>
-
-    <section id="about-us">
-        <div class="container">
-            <h1>Про нас:</h1>
-            <h4>Студія TRITONIX — це команда професіоналів, яка займається розробкою сучасних веб-сайтів з акцентом на
-                якість, ефективність та індивідуальний підхід до кожного проєкту. Ми спеціалізуємося на створенні
-                веб-ресурсів, використовуючи найсучасніші технології: HTML, CSS та JavaScript. Наша мета — зробити ваш
-                сайт не просто гарним, а й зручним для користувачів, швидким та адаптивним для всіх пристроїв.</h4>
-
-            <h3>Чому саме ми?</h3>
-            <h4>Вибираючи TRITONIX, ви отримуєте команду, яка працює на результат. Ми не просто створюємо сайти, ми
-                створюємо цифрові рішення, які допомагають вам досягти ваших цілей. Наші розробники мають глибоке
-                розуміння сучасних веб-технологій і постійно слідкують за останніми трендами у веб-дизайні та
-                програмуванні. Ми прагнемо забезпечити найкращий досвід для наших клієнтів, і тому на кожному етапі
-                роботи звертаємо увагу на всі деталі: від макету до кінцевого тестування.</h4>
-
-            <h4>Наші основні цінності — це надійність, професіоналізм та швидкість виконання. Ми завжди відкриті для
-                зворотного зв'язку та намагаємося створити такі рішення, які повністю задовольняють ваші потреби та
-                побажання. Ми цінуємо ваш час і ресурси, тому працюємо ефективно та відповідально на кожному етапі
-                створення сайту.</h4>
-
-            <h3>Етапи роботи:</h3>
-            <ol>
-                <li><strong><span>01</span> Відправка заявки:</strong> Ви надсилаєте нам заявку через форму на сайті або
-                    зв'язуєтесь з нами безпосередньо.</li>
-                <li><strong><span>02</span> Обговорення проєкту:</strong> Ми детально обговорюємо ваші вимоги та
-                    побажання, щоб зрозуміти, як саме має виглядати ваш сайт.</li>
-                <li><strong><span>03</span> Розробка та тестування:</strong> Наші спеціалісти розробляють сайт, тестують
-                    його на різних пристроях і забезпечують його стабільну роботу.</li>
-                <li><strong><span>04</span> Оплата:</strong> Після затвердження результатів ми надсилаємо вам рахунок
-                    для оплати.</li>
-                <li><strong><span>05</span> Передача проєкту:</strong> Після отримання оплати, ми передаємо вам готовий
-                    сайт і надаємо інструкції щодо його використання.</li>
-            </ol>
-        </div>
-    </section>
-
-
-
-    <section id="order-form" class="home-order">
-        <h1 class="order-title">Обговоримо ваш проєкт</h1>
-        <h5 class="order-description">Заповніть форму, після чого з вами зв'яжеться спеціаліст.</h5>
-        <video muted playsinline autoplay loop class="home-video-order" src="./src/video/video-order.mp4"></video>
-        <form id="orderForm">
-            <div class="input-top">
-                <input type="text" id="name" name="name" placeholder="Ваше ім'я*" required>
-
-                <input type="email" id="email" name="email" placeholder="Ваш email*" required>
-
-                <input type="tel" id="phone" name="phone" placeholder="+380123456789" required>
-
-                <input type="text" id="website" name="website" placeholder="Вебсайт компанії">
-
-                <input type="text" id="situation" name="situation" placeholder="Додайте опис">
-
-                <select id="service" name="service" required>
-                    <option value="" disabled selected>Оберіть послугу</option>
-                    <option value="landing">Розробка Landing Page</option>
-                    <option value="corporate">Розробка корпоративного сайту</option>
-                    <option value="ecommerce">E-commerce сайт</option>
-                    <option value="seo">SEO-оптимізація</option>
-                    <option value="other">Інше</option>
-                </select>
-
-                <input type="file" name="file" class="file-order" id="file" />
-                <div class="input-file">
-                    <div class="img-add-file">
-                        <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAP9JREFUSEvd1LErRWEYx/HvdyIpq1EpjAw2g8GuTGKxWSR/wrXd0WJgs8holEU2i7r/gUHJaJAy6Ode3XQT97wd3bqc9Tm/z3ne5+08MqDHAbkMB5xkXH0uOWVxx0nW2mADWFRfq/AiOMkccAuMAafq5q/hJBNddLoH21EP++F9O07SqV8CK1+QN2BJvfkJr4JngI1ueB2YBY6AR+BBPa4F94aSnAOrwILaKppxkkngDGipe9+FquB2fR44AC7U5scokkwBd8C1ulwT7uSugBN16x/DVZeVpN4ohg4eBZ6AkarOCuoNdf/zz+tur92CYL9X7oFt9aVou9X52N+D3wGIUooXUuRbGQAAAABJRU5ErkJggg==" />
+        <section id="price-calculator">
+            <h1 class="calculator-title">Розрахунок ціни на сайт:</h1>
+            <form id="calculatorForm">
+                <div class="select-enter">
+                    <label class="label-select-enter">Тип сайту:</label>
+                    <select id="siteType">
+                        <option value="1000">Landing Page</option>
+                        <option value="2500">Корпоративний сайт</option>
+                        <option value="1500">Сайт-візитка</option>
+                        <option value="2500">Блог</option>
+                    </select>
+                    <div class="pages">
+                        <label class="label-select-enter">Кількість сторінок:</label>
+                        <input type="number" id="pageCount" min="1" value="1">
                     </div>
-                    <div class="file-text">Додати файл</div>
                 </div>
-                <div class="order-bottom">
-                    <span class="personal-data">Натискаючи кнопку “Надіслати”, ви <br> погоджуєтесь з<a
-                            href="./additionally/privacy-policy-uk.html" target="_blank" rel="noopener noreferrer">
-                            Правилами обробки <br> персональних даних.</a></span>
-                    <button type="button" onclick="submitOrder()">Замовити</button>
+                <label>Додаткові функції:</label>
+                <div class="options">
+                    <div class="option">
+                        <input type="checkbox" id="responsiveDesign" value="300" class="option-input">
+                        <label for="responsiveDesign" class="option-label">Адаптивний дизайн</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="domainConnection" value="200" class="option-input">
+                        <label for="domainConnection" class="option-label">Підключення домену</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="hosting" value="500" class="option-input">
+                        <label for="hosting" class="option-label">Хостинг</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="googleAnalytics" value="200" class="option-input">
+                        <label for="googleAnalytics" class="option-label">Інтеграція з Google Analytics</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="contactForm" class="option-input" value="200" class="option-input">
+                        <label for="contactForm" class="option-label">Форма зворотного зв'язку</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="loginForm" class="option-input" value="200" class="option-input">
+                        <label for="loginForm" class="option-label">Форма реєстрації</label>
+                    </div>
                 </div>
-        </form>
-    </section>
 
-    <div class="social-bottom">
-        <a href="https://t.me/Tritonix_Bot" target="_blank" rel="noopener noreferrer"><img
-                src="./src/img/social/telegram-bot.png" alt="bot" class="telegram-bot"></a>
-        <a href="https://www.instagram.com/tritonix.studio/profilecard/?igsh=MXhybjA4ZDVueDNhcw==" target="_blank"
-            rel="noopener noreferrer"><img src="./src/img/social/instagram-icon.png" alt="bot" class="instagram"></a>
-        <a href="https://www.tiktok.com/@tritonix.it?is_from_webapp=1&sender_device=pc" target="_blank"
-            rel="noopener noreferrer"><img src="./src/img/social/tiktok-icon.png" alt="bot" class="tiktok"></a>
-    </div>
+                <button class="button-calculator" type="button" onclick="calculatePrice()">Розрахувати ціну</button>
+            </form>
+            <h3 class="totalPrice">Приблизна ціна: <span id="totalPrice">0</span> грн</h3>
+            </div>
+        </section>
 
-</main>
+        <section class="latest-portfolio">
+            <h1>Останні роботи:</h1>
+            <div class="portfolio-example" id="latest-projects">
+                <!-- Сюди будуть динамічно додані роботи -->
+            </div>
+            <a href="./portfolio.html"><button class="view-all"></b>Переглянути всі роботи</button></a>
+        </section>
+
+        <section id="about-us">
+            <div class="container">
+                <h1>Про нас:</h1>
+                <h4>Студія TRITONIX — це команда професіоналів, яка займається розробкою сучасних веб-сайтів з акцентом
+                    на
+                    якість, ефективність та індивідуальний підхід до кожного проєкту. Ми спеціалізуємося на створенні
+                    веб-ресурсів, використовуючи найсучасніші технології: HTML, CSS та JavaScript. Наша мета — зробити
+                    ваш
+                    сайт не просто гарним, а й зручним для користувачів, швидким та адаптивним для всіх пристроїв.</h4>
+
+                <h3>Чому саме ми?</h3>
+                <h4>Вибираючи TRITONIX, ви отримуєте команду, яка працює на результат. Ми не просто створюємо сайти, ми
+                    створюємо цифрові рішення, які допомагають вам досягти ваших цілей. Наші розробники мають глибоке
+                    розуміння сучасних веб-технологій і постійно слідкують за останніми трендами у веб-дизайні та
+                    програмуванні. Ми прагнемо забезпечити найкращий досвід для наших клієнтів, і тому на кожному етапі
+                    роботи звертаємо увагу на всі деталі: від макету до кінцевого тестування.</h4>
+
+                <h4>Наші основні цінності — це надійність, професіоналізм та швидкість виконання. Ми завжди відкриті для
+                    зворотного зв'язку та намагаємося створити такі рішення, які повністю задовольняють ваші потреби та
+                    побажання. Ми цінуємо ваш час і ресурси, тому працюємо ефективно та відповідально на кожному етапі
+                    створення сайту.</h4>
+
+                <h3>Етапи роботи:</h3>
+                <ol>
+                    <li><strong><span>01</span> Відправка заявки:</strong> Ви надсилаєте нам заявку через форму на сайті
+                        або
+                        зв'язуєтесь з нами безпосередньо.</li>
+                    <li><strong><span>02</span> Обговорення проєкту:</strong> Ми детально обговорюємо ваші вимоги та
+                        побажання, щоб зрозуміти, як саме має виглядати ваш сайт.</li>
+                    <li><strong><span>03</span> Розробка та тестування:</strong> Наші спеціалісти розробляють сайт,
+                        тестують
+                        його на різних пристроях і забезпечують його стабільну роботу.</li>
+                    <li><strong><span>04</span> Оплата:</strong> Після затвердження результатів ми надсилаємо вам
+                        рахунок
+                        для оплати.</li>
+                    <li><strong><span>05</span> Передача проєкту:</strong> Після отримання оплати, ми передаємо вам
+                        готовий
+                        сайт і надаємо інструкції щодо його використання.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="order-form" class="home-order">
+            <h1 class="order-title">Обговоримо ваш проєкт</h1>
+            <h5 class="order-description">Заповніть форму, після чого з вами зв'яжеться спеціаліст.</h5>
+            <video muted playsinline autoplay loop class="home-video-order" src="./src/video/video-order.mp4"></video>
+            <form id="orderForm">
+                <div class="input-top">
+                    <input type="text" id="name" name="name" placeholder="Ваше ім'я*" required>
+
+                    <input type="email" id="email" name="email" placeholder="Ваш email*" required>
+
+                    <input type="tel" id="phone" name="phone" placeholder="+380123456789" required>
+
+                    <input type="text" id="website" name="website" placeholder="Вебсайт компанії">
+
+                    <input type="text" id="situation" name="situation" placeholder="Додайте опис">
+
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Оберіть послугу</option>
+                        <option value="landing">Розробка Landing Page</option>
+                        <option value="corporate">Розробка корпоративного сайту</option>
+                        <option value="ecommerce">E-commerce сайт</option>
+                        <option value="seo">SEO-оптимізація</option>
+                        <option value="other">Інше</option>
+                    </select>
+
+                    <input type="file" name="file" class="file-order" id="file" />
+                    <div class="input-file">
+                        <div class="img-add-file">
+                            <img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAP9JREFUSEvd1LErRWEYx/HvdyIpq1EpjAw2g8GuTGKxWSR/wrXd0WJgs8holEU2i7r/gUHJaJAy6Ode3XQT97wd3bqc9Tm/z3ne5+08MqDHAbkMB5xkXH0uOWVxx0nW2mADWFRfq/AiOMkccAuMAafq5q/hJBNddLoH21EP++F9O07SqV8CK1+QN2BJvfkJr4JngI1ueB2YBY6AR+BBPa4F94aSnAOrwILaKppxkkngDGipe9+FquB2fR44AC7U5scokkwBd8C1ulwT7uSugBN16x/DVZeVpN4ohg4eBZ6AkarOCuoNdf/zz+tur92CYL9X7oFt9aVou9X52N+D3wGIUooXUuRbGQAAAABJRU5ErkJggg==" />
+                        </div>
+                        <div class="file-text">Додати файл</div>
+                    </div>
+                    <div class="order-bottom">
+                        <span class="personal-data" id="home-personal-data">Натискаючи кнопку “Надіслати”, ви <br> погоджуєтесь з<a
+                                href="./additionally/privacy-policy-uk.html" target="_blank" rel="noopener noreferrer">
+                                Правилами обробки <br> персональних даних.</a></span>
+                        <button id="home-order-button" type="button" onclick="submitOrder()">Замовити</button>
+                    </div>
+            </form>
+        </section>
+
+        <div class="social-bottom">
+            <a href="https://t.me/Tritonix_Bot" target="_blank" rel="noopener noreferrer"><img
+                    src="./src/img/social/telegram-bot.png" alt="bot" class="telegram-bot"></a>
+            <a href="https://www.instagram.com/tritonix.studio/profilecard/?igsh=MXhybjA4ZDVueDNhcw==" target="_blank"
+                rel="noopener noreferrer"><img src="./src/img/social/instagram-icon.png" alt="bot"
+                    class="instagram"></a>
+            <a href="https://www.tiktok.com/@tritonix.it?is_from_webapp=1&sender_device=pc" target="_blank"
+                rel="noopener noreferrer"><img src="./src/img/social/tiktok-icon.png" alt="bot" class="tiktok"></a>
+        </div>
+
+    </main>
 
     <footer>
         <div class="footer-top">
