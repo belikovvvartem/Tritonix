@@ -4,42 +4,42 @@
         "price": "from 25$",
         "terms": "Terms: 5-7 days",
         "description": "A simple one-page presentation of a product or service.",
-        "link": "./order-form-eng.html"
+        "link": "./English Version/order-form-eng.html"
     },
     {
         "title": "Corporate website",
         "price": "from 65$",
         "terms": "Terms: 10-15 days",
         "description": "An informational website for your business.",
-        "link": "./order-form-eng.html"
+        "link": "./English Version/order-form-eng.html"
     },
     {
         "title": "Business card website",
         "price": "from 41$",
         "terms": "Terms: 3-5 days",
         "description": "A minimalist website for small businesses.",
-        "link": "./order-form-eng.html"
+        "link": "./English Version/order-form-eng.html"
     },
     {
         "title": "Blog",
         "price": "from 68$",
         "terms": "Terms: 7-10 days",
         "description": "A platform for publications and articles.",
-        "link": "./order-form-eng.html"
+        "link": "./English Version/order-form-eng.html"
     },
     {
         "title": "E-commerce website",
         "price": "from 135$",
         "terms": "Terms: 15-20 days",
         "description": "An online store for selling products online.",
-        "link": "./order-form-eng.html"
+        "link": "./English Version/order-form-eng.html"
     },
     {
         "title": "Custom project",
         "price": "from 185$",
         "terms": "Terms: by agreement",
         "description": "A website tailored to your specific requirements.",
-        "link": "./order-form-eng.html"
+        "link": "./English Version/order-form-eng.html"
     }
     
 ]
