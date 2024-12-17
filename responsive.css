@@ -122,6 +122,14 @@
         justify-content: center;
     }
 
+    .price-card {
+        width: 70%;
+    }
+
+    .social-bottom {
+        display: none;
+    }
+
     .portfolio-example {
         display: flex;
         flex-direction: column;
@@ -226,6 +234,15 @@
     #home-order-button {
         top: -10px;
         left: -185px;
+    }
+
+    .option {
+        width: 30%;
+        height: 30px;
+    }
+
+    .option label {
+        font-size: 15px;
     }
 
     footer {
@@ -441,6 +458,7 @@
         object-position: center;
         transition: border-radius 0.3s ease;
     }
+
 
     footer {
         position: relative;
