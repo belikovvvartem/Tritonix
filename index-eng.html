@@ -5,31 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tritonix</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="shortcut icon" sizes="14×14" href="./11zon_cropped (1).png" type="image/x-icon">
-    <link rel="stylesheet" href="../responsive.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" sizes="14×14" href="./favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./responsive.css">
 </head>
 
 <body>
     <header>
         <div class="header-logo">
-            <img src="../src/img/favicon/favicon.png" alt="" class="header-foto">
-            <a href="./index.html">
+            <img src="./favicon.png" alt="" class="header-foto">
+            <a href="./index-eng.html">
                 <div class="header-title">TRITONIX</div>
             </a>
         </div>
 
         <nav class="overlay" id="menuOverlay">
             <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./price.html">Services</a></li>
-                <li><a href="./additionally/calculator.html">Calculator</a></li>
-                <li><a href="./portfolio.html">Portfolio</a></li>
-                <li><a href="./additionally/about-us.html">About Us</a></li>
+                <li><a href="./index-eng.html">Home</a></li>
+                <li><a href="./English Version/price-eng.html">Services</a></li>
+                <li><a href="./English Version/calculator-eng.html">Calculator</a></li>
+                <li><a href="./portfolio-eng.html">Portfolio</a></li>
+                <li><a href="./English Version/aboute-us-eng.html">About Us</a></li>
                 <li><a href="#Contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="language"><a href="../index.html">Ua</a><span><a href="./index-eng.html">Eng</a></span></div>
+        <div class="language"><a href="./index.html">Ua</a><span><a href="./index-eng.html">Eng</a></span></div>
 
         <button class="menu-toggle" id="menuToggle">☰</button>
     </header>
@@ -39,18 +39,20 @@
         <section class="hero">
             <div class="hero-title">We will create your <br> perfect website.</div>
             <hr class="hero-line">
-            <div class="hero-text">Your idea, our experience — together we will create a website that <br> grabs attention, impresses with its stylish design, and leaves <br> a lasting impression. We will turn your vision <br> into a working tool for your business.</div>
-            <video muted playsinline autoplay loop src="../src/video/hero-section.mp4"></video>
+            <div class="hero-text">Your idea, our experience — together we will create a website that <br> grabs
+                attention, impresses with its stylish design, and leaves <br> a lasting impression. We will turn your
+                vision <br> into a working tool for your business.</div>
+            <video muted playsinline autoplay loop src="./src/video/hero-section.mp4"></video>
         </section>
 
         <section class="price">
             <h1 class="price-title">Website development cost:</h1>
             <div class="price-cards" id="price-cards"></div>
-            <a href="../price.html"><button class="price-all-button">More prices</button></a>
+            <a href="./English Version/price-eng.html"><button class="price-all-button">More prices</button></a>
         </section>
 
         <script>
-            fetch('./data.json')
+            fetch('./English Version/data-eng.json')
                 .then(response => response.json())
                 .then(data => {
                     const priceCardsContainer = document.getElementById('price-cards');
@@ -125,28 +127,42 @@
         <section class="latest-portfolio">
             <h1>Latest Works:</h1>
             <div class="portfolio-example" id="latest-projects">
-                <!-- Projects will be dynamically added here -->
+
             </div>
-            <a href="./portfolio.html"><button class="view-all">View all works</button></a>
+            <a href="./portfolio-eng.html"><button class="view-all">View all works</button></a>
         </section>
 
         <section id="about-us">
             <div class="container">
                 <h1>About Us:</h1>
-                <h4>TRITONIX Studio is a team of professionals specializing in modern website development with a focus on quality, efficiency, and an individualized approach to each project. We create web resources using the latest technologies: HTML, CSS, and JavaScript. Our goal is to make your website not only beautiful but also user-friendly, fast, and responsive on all devices.</h4>
+                <h4>TRITONIX Studio is a team of professionals specializing in modern website development with a focus
+                    on quality, efficiency, and an individualized approach to each project. We create web resources
+                    using the latest technologies: HTML, CSS, and JavaScript. Our goal is to make your website not only
+                    beautiful but also user-friendly, fast, and responsive on all devices.</h4>
 
                 <h3>Why choose us?</h3>
-                <h4>By choosing TRITONIX, you get a team that works for results. We don’t just create websites; we create digital solutions that help you achieve your goals. Our developers have a deep understanding of modern web technologies and constantly follow the latest trends in web design and programming. We strive to provide the best experience for our clients, paying attention to every detail at each stage of the project, from layout to final testing.</h4>
+                <h4>By choosing TRITONIX, you get a team that works for results. We don’t just create websites; we
+                    create digital solutions that help you achieve your goals. Our developers have a deep understanding
+                    of modern web technologies and constantly follow the latest trends in web design and programming. We
+                    strive to provide the best experience for our clients, paying attention to every detail at each
+                    stage of the project, from layout to final testing.</h4>
 
-                <h4>Our core values are reliability, professionalism, and speed of execution. We are always open to feedback and aim to create solutions that fully meet your needs and wishes. We value your time and resources, which is why we work efficiently and responsibly at every stage of website creation.</h4>
+                <h4>Our core values are reliability, professionalism, and speed of execution. We are always open to
+                    feedback and aim to create solutions that fully meet your needs and wishes. We value your time and
+                    resources, which is why we work efficiently and responsibly at every stage of website creation.</h4>
 
                 <h3>Work stages:</h3>
                 <ol>
-                    <li><strong><span>01</span> Submit a request:</strong> You send us a request through the form on the website or contact us directly.</li>
-                    <li><strong><span>02</span> Project discussion:</strong> We thoroughly discuss your requirements and wishes to understand how your website should look.</li>
-                    <li><strong><span>03</span> Development and testing:</strong> Our specialists develop the site, test it on different devices, and ensure its stable performance.</li>
-                    <li><strong><span>04</span> Payment:</strong> After approving the results, we send you the invoice for payment.</li>
-                    <li><strong><span>05</span> Project transfer:</strong> After receiving payment, we transfer the finished site to you and provide instructions for its use.</li>
+                    <li><strong><span>01</span> Submit a request:</strong> You send us a request through the form on the
+                        website or contact us directly.</li>
+                    <li><strong><span>02</span> Project discussion:</strong> We thoroughly discuss your requirements and
+                        wishes to understand how your website should look.</li>
+                    <li><strong><span>03</span> Development and testing:</strong> Our specialists develop the site, test
+                        it on different devices, and ensure its stable performance.</li>
+                    <li><strong><span>04</span> Payment:</strong> After approving the results, we send you the invoice
+                        for payment.</li>
+                    <li><strong><span>05</span> Project transfer:</strong> After receiving payment, we transfer the
+                        finished site to you and provide instructions for its use.</li>
                 </ol>
             </div>
         </section>
@@ -185,8 +201,9 @@
                         <div class="file-text">Add file</div>
                     </div>
                     <div class="order-bottom">
-                        <span class="personal-data" id="home-personal-data">By pressing the "Send" button, you <br> agree with<a
-                                href="./additionally-eng/privacy-policy-eng.html" target="_blank" rel="noopener noreferrer">
+                        <span class="personal-data" id="home-personal-data">By pressing the "Send" button, you <br>
+                            agree with<a href="./English Version/privacy-policy-eng.html" target="_blank"
+                                rel="noopener noreferrer">
                                 Processing rules <br> personal data.</a></span>
                         <button id="home-order-button" type="button" onclick="submitOrder()">Order</button>
                     </div>
@@ -205,21 +222,21 @@
 
     <footer>
         <div class="footer-top">
-            <a href="./index.html">
+            <a href="./index-eng.html">
                 <div class="header-title" id="footer-title">TRITONIX</div>
             </a>
             <nav class="footer-nav" id="Contact">
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./price.html">Services</a></li>
-                    <li><a href="./additionally/calculator.html">Calculator</a></li>
-                    <li><a href="./portfolio.html">Portfolio</a></li>
-                    <li><a href="./additionally/about-us.html">About Us</a></li>
+                    <li><a href="./index-eng.html">Home</a></li>
+                    <li><a href="./English Version/price-eng.html">Services</a></li>
+                    <li><a href="./English Version/calculator-eng.html">Calculator</a></li>
+                    <li><a href="./portfolio-eng.html">Portfolio</a></li>
+                    <li><a href="./English Version/aboute-us-eng.html">About Us</a></li>
                     <li><a href="#Contact">Contact</a></li>
                 </ul>
             </nav>
-            <a href="./additionally/order-form.html" target="_blank"><button class="footer-order">Keep
-                application</button></a>
+            <a href="./English Version/order-form-eng.html" target="_blank"><button class="footer-order">Keep
+                    application</button></a>
         </div>
 
         <div class="footer-center">
@@ -233,8 +250,8 @@
         </div>
     </footer>
 
-    <script src="../additionally/order.js"></script>
-    <script src="../script.js"></script>
+    <script src="./additionally/order.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

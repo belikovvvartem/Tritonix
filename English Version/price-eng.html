@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tritonix</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" sizes="14×14" href="./favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../responsive.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="../favicon.png" alt="" class="header-foto">
+            <a href="../index-eng.html">
+                <div class="header-title">TRITONIX</div>
+            </a>
+        </div>
+
+        <nav class="overlay" id="menuOverlay">
+            <ul>
+                <li><a href="../index-eng.html">Home</a></li>
+                <li><a href="./price-eng.html">Services</a></li>
+                <li><a href="./calculator-eng.html">Calculator</a></li>
+                <li><a href="../portfolio-eng.html">Portfolio</a></li>
+                <li><a href="./aboute-us-eng.html">About Us</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language"><a href="../price.html">Ua</a><span><a href="./price-eng.html">Eng</a></span></div>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+    </header>
+    <a href="../index-eng.html"><button class="header-button-home">Home</button></a>
+
+    <section class="price">
+        <h1 class="price-title">Website development cost:</h1>
+        <div class="price-cards" id="price-cards"></div>
+    </section>
+
+    <script>
+        fetch('./data-eng.json')
+            .then(response => response.json())
+            .then(data => {
+                const priceCardsContainer = document.getElementById('price-cards');
+
+                // Виводимо всі тарифи
+                data.forEach(item => {
+                    const card = document.createElement('div');
+                    card.classList.add('price-card');
+
+                    card.innerHTML = `
+                    <div class="price-card-title">${item.title}</div>
+                    <div class="price-card-worth">${item.price}</div>
+                    <div class="price-card-term">${item.terms}</div>
+                    <div class="price-card-description">${item.description}</div>
+                    <a href="${item.link}" target="_blank" rel="noopener noreferrer"><button class="price-card-order-button">Order</button></a>
+                `;
+
+                    priceCardsContainer.appendChild(card);
+                });
+            });
+    </script>
+
+    <footer>
+        <div class="footer-top">
+            <a href="./index-eng.html">
+                <div class="header-title" id="footer-title">TRITONIX</div>
+            </a>
+            <nav class="footer-nav" id="Contact">
+                <ul>
+                    <li><a href="../index-eng.html">Home</a></li>
+                    <li><a href="./price-eng.html">Services</a></li>
+                    <li><a href="./calculator-eng.html">Calculator</a></li>
+                    <li><a href="../portfolio-eng.html">Portfolio</a></li>
+                    <li><a href="./aboute-us-eng.html">About Us</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="./additionally/order-form.html" target="_blank"><button class="footer-order">Keep
+                application</button></a>
+        </div>
+
+        <div class="footer-center">
+            <a href="mailto:support@tritonix.com">support@tritonix.com</a>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 — Tritonix.com.ua</p>
+            <a href="./privacy-policy-eng.html">
+                <p>Privacy Policy</p>
+            </a>
+        </div>
+    </footer>
+
+    <script src="../additionally/order.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>
