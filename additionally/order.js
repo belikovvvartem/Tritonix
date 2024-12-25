@@ -2,76 +2,55 @@ const telegramBotToken = '8055588826:AAE4q3q5UooUwvDB6BxPdBRucdopgEOyiL4';
 const telegramChatId = '7034327346';
 
 function submitOrder() {
-    const form = document.getElementById('orderForm');
-    const formData = new FormData(form); // Отримуємо всі дані форми, включаючи файл
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const website = document.getElementById("website").value.trim();
+    const situation = document.getElementById("situation").value.trim();
+    const service = document.getElementById("service").value.trim();
 
-    // Перевірка обов'язкових полів
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const phone = formData.get('phone');
-    const service = formData.get('service');
-
-    if (!name || !email || !phone || !service) {
-        alert('Будь ласка, заповніть усі обов’язкові поля!');
-        return; // Зупиняємо виконання функції, якщо дані не введені
+    // Перевірка заповнення обов'язкових полів
+    if (!name) {
+        alert("Будь ласка, введіть ваше ім'я.");
+        return;
     }
 
-    // Формування повідомлення
+    if (!phone) {
+        alert("Будь ласка, введіть ваш номер телефону.");
+        return;
+    }
+
+    // Перевірка валідності email
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email && !emailPattern.test(email)) {
+        alert("Будь ласка, введіть правильний email.");
+        return;
+    }
+
     const message = `
-        🔔 Нова заявка!
+        Замовлення:
         Ім'я: ${name}
-        Електронна пошта: ${email}
-        Номер телефону: ${phone}
-        Вебсайт: ${formData.get('website') || 'Не вказано'}
-        Послуга: ${service}
-        Опис: ${formData.get('situation') || 'Не вказано' }
+        Email: ${email}
+        Телефон: ${phone}
+        Вебсайт: ${website}
+        Опис: ${situation}
+        Тип сайту: ${service}
     `;
 
-    // Відправка повідомлення та файлу в Telegram
-    const file = formData.get('file'); // Отримуємо файл
+    const url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${telegramChatId}&text=${encodeURIComponent(message)}`;
 
-    // Спочатку відправляємо текстове повідомлення
-    fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            chat_id: telegramChatId,
-            text: message,
-        }),
-    })
-    .then((response) => {
-        if (response.ok) {
-            console.log('Повідомлення успішно відправлено!');
-
-            // Тепер відправимо файл (якщо він є)
-            if (file) {
-                const formDataForFile = new FormData();
-                formDataForFile.append('chat_id', telegramChatId);
-                formDataForFile.append('document', file); // Додаємо файл у форму
-                formDataForFile.append('caption', 'Файл від користувача');
-
-                fetch(`https://api.telegram.org/bot${telegramBotToken}/sendDocument`, {
-                    method: 'POST',
-                    body: formDataForFile, // Відправка файлу
-                })
-                .then((fileResponse) => {
-                    if (fileResponse.ok) {
-                        alert('Замовлення успішно надіслані!');
-                        form.reset();
-                    } 
-                })
-                .catch((error) => {
-                    alert('Помилка при відправці файлу: ' + error.message);
-                });
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                alert("Ваше замовлення надіслано!");
+                document.getElementById("orderForm").reset(); // Очищаємо форму
             } else {
-                alert('Замовлення успішно надіслано!');
-                form.reset();
+                alert("Помилка при надсиланні замовлення.");
             }
-        } else {
-            alert('Помилка надсилання! Спробуйте ще раз.');
-        }
-    })
-    .catch((error) => {
-        alert('Помилка: ' + error.message);
-    });
+        })
+        .catch(error => {
+            alert("Щось пішло не так. Спробуйте ще раз.");
+            console.error('Error:', error);
+        });
 }
