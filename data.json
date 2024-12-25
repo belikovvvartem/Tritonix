@@ -12,6 +12,20 @@
         "terms": "Терміни: 10-15 днів",
         "description": "Інформаційний сайт для вашого бізнесу.",
         "link": "./additionally/order-form.html"
+    },   
+    {
+        "title": "Telegram-бот",
+        "price": "від 1000 грн",
+        "terms": "Терміни: 7-10 днів",
+        "description": "Бот для автоматизації процесів або інтерактивних функцій у Telegram.",
+        "link": "./additionally/order-form.html"
+    },
+    {
+        "title": "Інше",
+        "price": "від 1000 грн",
+        "terms": "Терміни змінні",
+        "description": "Реалізація будь-яких інших послуг за запитом.",
+        "link": "./additionally/order-form.html"
     },
     {
         "title": "Сайт-візитка",
@@ -28,17 +42,45 @@
         "link": "./additionally/order-form.html"
     },
     {
-        "title": "E-commerce сайт",
-        "price": "від 5000 грн",
-        "terms": "Терміни: 15-20 днів",
-        "description": "Інтернет-магазин для продажу товарів онлайн.",
+        "title": "Портфоліо",
+        "price": "від 2000 грн",
+        "terms": "Терміни: 7-10 днів",
+        "description": "Сайт для демонстрації ваших робіт чи досягнень.",
         "link": "./additionally/order-form.html"
     },
     {
-        "title": "Індивідуальний проєкт",
-        "price": "від 7000 грн",
-        "terms": "Терміни: за домовленістю",
-        "description": "Сайт під ваші конкретні вимоги.",
+        "title": "Новинний сайт",
+        "price": "від 3000 грн",
+        "terms": "Терміни: 10-15 днів",
+        "description": "Сайт для публікації новин та статей.",
+        "link": "./additionally/order-form.html"
+    },
+    {
+        "title": "Блог",
+        "price": "від 2500 грн",
+        "terms": "Терміни: 7-12 днів",
+        "description": "Особистий або тематичний блог.",
+        "link": "./additionally/order-form.html"
+    },
+    {
+        "title": "Освітній сайт",
+        "price": "від 4500 грн",
+        "terms": "Терміни: 20-25 днів",
+        "description": "Сайт для навчання та публікації освітнього контенту.",
+        "link": "./additionally/order-form.html"
+    },
+    {
+        "title": "Сайт-каталог",
+        "price": "від 3500 грн",
+        "terms": "Терміни: 10-15 днів",
+        "description": "Сайт для презентації товарів чи послуг без функції покупки.",
+        "link": "./additionally/order-form.html"
+    },
+    {
+        "title": "Сайт для заходів",
+        "price": "від 3000 грн",
+        "terms": "Терміни: 7-12 днів",
+        "description": "Сайт для анонсів та управління подіями.",
         "link": "./additionally/order-form.html"
     }
 ]

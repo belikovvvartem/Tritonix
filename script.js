@@ -12,12 +12,14 @@ function calculatePrice() {
     const siteType = parseInt(document.getElementById('siteType').value);
     const pageCount = parseInt(document.getElementById('pageCount').value);
     const responsiveDesign = document.getElementById('responsiveDesign').checked ? parseInt(document.getElementById('responsiveDesign').value) : 0;
+    const multiLanguage = document.getElementById('multiLanguage').checked ? parseInt(document.getElementById('multiLanguage').value) : 0;
+    const socialMediaIntegration = document.getElementById('socialMediaIntegration').checked ? parseInt(document.getElementById('socialMediaIntegration').value) : 0;
     const domainConnection = document.getElementById('domainConnection').checked ? parseInt(document.getElementById('domainConnection').value) : 0;
     const hosting = document.getElementById('hosting').checked ? parseInt(document.getElementById('hosting').value) : 0;
     const googleAnalytics = document.getElementById('googleAnalytics').checked ? parseInt(document.getElementById('googleAnalytics').value) : 0;
     const contactForm = document.getElementById('contactForm').checked ? parseInt(document.getElementById('contactForm').value) : 0;
     const loginForm = document.getElementById('loginForm').checked ? parseInt(document.getElementById('loginForm').value) : 0;
-    const totalPrice = siteType + (pageCount * 100) + responsiveDesign + domainConnection + hosting + googleAnalytics + contactForm + loginForm;
+    const totalPrice = siteType + (pageCount * 100) + responsiveDesign + multiLanguage + socialMediaIntegration + domainConnection + hosting + googleAnalytics + contactForm + loginForm;
     document.getElementById('totalPrice').textContent = totalPrice;
 }
 
