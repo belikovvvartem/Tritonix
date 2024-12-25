@@ -773,3 +773,7 @@ footer {
     bottom: 150px;
     left: 10px;
 }
+
+.hidden-meta {
+    display: none;
+}
