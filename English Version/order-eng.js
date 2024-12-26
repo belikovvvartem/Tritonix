@@ -11,29 +11,29 @@ function submitOrder() {
 
 
     if (!name) {
-        alert("Будь ласка, введіть ваше ім'я.");
+        alert("Please enter your name.");
         return;
     }
 
     if (!email) {
-        alert("Будь ласка, введіть вашу пошту.");
+        alert("Please enter your email.");
         return;
     }
 
     if (!phone) {
-        alert("Будь ласка, введіть ваш номер телефону.");
+        alert("Please enter your number.");
         return;
     }
 
     if (!service) {
-        alert("Будь ласка, виберіть тип сайту.");
+        alert("Please choose the type of website.");
         return;
-    }
+        }  
 
-    // Перевірка валідності email
+    
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email && !emailPattern.test(email)) {
-        alert("Будь ласка, введіть правильний email.");
+        alert("Please enter a valid email.");
         return;
     }
 
@@ -54,14 +54,14 @@ function submitOrder() {
         .then(response => response.json())
         .then(data => {
             if (data.ok) {
-                alert("Дякуємо за замовлення, скоро з вами зв'яжуться наші спеціалісти.");
+                alert("Thank you for your order, our specialists will contact you soon.");
                 document.getElementById("orderForm").reset(); 
             } else {
-                alert("Помилка при надсиланні замовлення.");
+                alert("Error sending order.");
             }
         })
         .catch(error => {
-            alert("Ой халепа, щось пішло не так. Спробуйте ще раз.");
+            alert("Oops, something went wrong. Please try again.");
             console.error('Error:', error);
         });
 }
