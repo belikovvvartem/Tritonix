@@ -1,20 +1,26 @@
 [
     {
+        "image": "src/img/portfolio/portfolio-school.png",
+        "title": "School",
+        "description": "Сайт школи з новинами <br> та адмініструванням.",
+        "link": "https://belikovvvartem.github.io/School/"
+    },
+    {
         "image": "src/img/portfolio/portfolio-color-rawe.jpg",
         "title": "NIKE",
-        "description": "Для продажу кастомізованих <br> кросівок Nike. ",
-        "link": "https://example.com/project1"
+        "description": "Для продажу кастомізованих <br> кросівок Nike.",
+        "link": "https://belikovvvartem.github.io/Nike/"
     },
     {
         "image": "src/img/portfolio/portfolio-desing-agency.jpg",
         "title": "Desing Agency",
-        "description": "Це опис проєкту 2",
-        "link": "additional-pages/project2.html"
+        "description": "Агенція зі створення кастомних <br> вебсайтів.",
+        "link": "https://belikovvvartem.github.io/Smart-Web--Design-Agency/"
     },
     {
         "image": "src/img/portfolio/portfolio-webstudio.jpg",
         "title": "WebStudio",
-        "description": "Це опис проєкту 3",
-        "link": "additional-pages/project3.html"
+        "description": "Вебстудія: ефективні сайти для <br> бізнесу.",
+        "link": "https://belikovvvartem.github.io/WebStudio/"
     }
 ]
