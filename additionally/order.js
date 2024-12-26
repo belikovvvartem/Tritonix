@@ -42,7 +42,7 @@ function submitOrder() {
 
         Ім'я: ${name}
         Email: ${email}
-        Телефон: ${phone}
+        Телефон: (+380)${phone}
         Вебсайт: ${website}
         Опис: ${situation}
         Тип сайту: ${service}
