@@ -86,3 +86,17 @@ menuOverlay.querySelectorAll('a').forEach(link => {
     menuToggle.textContent = '☰';
   });
 });
+
+
+
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+
+  
+  document.addEventListener("keydown", function (e) {
+    if (e.keyCode == 123) { // F12
+      e.preventDefault();
+    }
+  });
+  
