@@ -182,6 +182,7 @@ nav a:hover {
 
 .menu-toggle {
     display: none;
+    text-align: center;
 }
 
 .hero {
