@@ -236,6 +236,12 @@
         left: -185px;
     }
 
+    .header-button-home {
+        position: absolute;
+        left: 15px;
+        top: 30px;
+    }
+
     .option {
         width: 30%;
         height: 30px;

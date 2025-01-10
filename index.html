@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="./responsive.css">
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
 
-
-
     <meta name="description"
         content="Замовте професійний сайт під ключ від Tritonix. Якісна розробка, швидке виконання та доступні ціни.">
     <meta name="keywords"
@@ -31,12 +29,7 @@
         content="На головній сторінці Tritonix ви знайдете все необхідне: прайс, калькулятор, форму замовлення, портфоліо та інформацію про нас.">
     <meta name="language" content="Ukrainian">
     <meta http-equiv="Content-Language" content="uk">
-
-
-
-
 </head>
-
 
 <body>
     <header>
@@ -86,7 +79,6 @@
                 .then(data => {
                     const priceCardsContainer = document.getElementById('price-cards');
 
-                    // Виводимо перші 4 тарифи
                     data.slice(0, 4).forEach(item => {
                         const card = document.createElement('div');
                         card.classList.add('price-card');
@@ -269,7 +261,7 @@
                     </div>
                     <div class="order-bottom">
                         <span class="personal-data" id="home-personal-data">Натискаючи кнопку “Надіслати”, ви <br>
-                            погоджуєтесь з<a href="./additionally/privacy-policy-uk.html" target="_blank"
+                            погоджуєтесь з<a href="./additionally/privacy-policy-uk.html" 
                                 rel="noopener noreferrer">
                                 Правилами обробки <br> персональних даних.</a></span>
                         <button id="home-order-button" type="button" onclick="submitOrder()">Замовити</button>
@@ -306,7 +298,7 @@
                     <li><a href="#Contact">Контакти</a></li>
                 </ul>
             </nav>
-            <a href="./additionally/order-form.html" target="_blank"><button class="footer-order">Залишити
+            <a href="./additionally/order-form.html" ><button class="footer-order">Залишити
                     заявку</button></a>
         </div>
 
