@@ -32,11 +32,24 @@ h1 {
     font-size: 55px;
 }
 
+h2 {
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 45px;
+}
+
 h3 {
     font-family: "Arsenal SC", sans-serif;
     font-weight: 600;
     font-style: normal;
     font-size: 25px;
+}
+
+h4 {
+    color: rgb(154, 146, 146);
+    font-family: 'M PLUS 1p', sans-serif;
+    font-weight: 400;
 }
 
 button {
@@ -476,10 +489,9 @@ label {
 
 .example-arrow {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    bottom: 40px;
     right: 0;
+    bottom: 0;
+    fill: #ffffff;
 }
 
 .view-all a {
@@ -643,12 +655,6 @@ label {
     margin-top: 150px;
 }
 
-#about-us h4 {
-    color: rgb(154, 146, 146);
-    font-family: 'M PLUS 1p', sans-serif;
-    font-weight: 400;
-}
-
 #about-us ol {
     display: flex;
     flex-wrap: wrap;
@@ -774,4 +780,3 @@ footer {
     bottom: 150px;
     left: 10px;
 }
-
