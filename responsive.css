@@ -15,7 +15,7 @@
         font-family: "Arsenal SC", sans-serif;
         font-weight: 600;
         font-style: normal;
-        font-size: 45px;
+        font-size: 30px;
     }
 
     h3 {
@@ -45,21 +45,20 @@
 
     .menu-toggle {
         display: block;
-    }
-
-    .menu-toggle {
         position: absolute;
+        text-align: center;
+        line-height: 50px;
         right: 0;
         top: -45px;
-        font-size: 24px;
-        width: 54px;
-        height: 54px;
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
         background: none;
-        border: 1px solid var(--color-basic-white);
-        box-shadow: none;
-        color: #fff;
+        border: 1px solid white;
+        color: #ffffff;
         cursor: pointer;
-        z-index: 1100;
+        z-index: 1000;
+        
     }
 
     .overlay {
@@ -123,35 +122,104 @@
     }
 
     .price-card {
-        width: 70%;
+        width: 30%;
+        height: 280px;
+        font-size: 15px;
+        
+        .price-card-title {
+            font-size: 20px;
+        }
+
+        .price-card-worth {
+            font-size: 18px;
+        }
+
+        .price-card-term {
+            width: 100%;
+            font-size: 12px;
+        }
+
+        .price-card-description {
+            font-size: 11px;
+        }
+
+        button {
+            width: 100%;
+            font-size: 15px;
+        }
+    }
+
+    .price-all-button {
+        width: 200px;
+        font-size: 18px;
+    }
+
+    .label-select-enter {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    #siteType {
+        margin: 15px 5px;
+    }
+
+    #pageCount {
+        margin: 15px 5px;
+    }
+
+    .button-calculator {
+        width: 200px;
+        font-size: 18px;
+    }
+
+    .totalPrice {
+        margin-top: 20px;
     }
 
     .social-bottom {
         display: none;
     }
 
-    .portfolio-example {
+    #latest-projects {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .example-link {
+        width: 45%;
+        height: 330px;
+
     }
 
     .example {
         position: relative;
-        margin-top: 50px;
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+        
     }
 
     .example-foto {
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
+        width: 100%;
+        height: 50%;
+        border-radius: 10%;
         object-fit: cover;
         object-position: center;
-        transition: border-radius 0.3s ease;
+    }
+
+    .view-all {
+        width: 250px;
+        font-size: 18px;
     }
 
     #order-form {
         position: relative;
+    }
+
+    .order-title {
+        margin-left: -50px;
+        margin-bottom: 45px;
     }
 
     .order-video {
@@ -361,9 +429,6 @@
 
     .menu-toggle {
         display: block;
-    }
-
-    .menu-toggle {
         position: absolute;
         right: 0;
         top: -45px;
