@@ -762,6 +762,7 @@ footer {
     flex-direction: column;
     bottom: 50px;
     left: 25px;
+    z-index: -1;
 }
 
 .instagram {
