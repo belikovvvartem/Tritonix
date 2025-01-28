@@ -21,7 +21,7 @@ body {
     box-sizing: border-box;
     background: #000;
     color: var(--color-basic-white);
-    user-select: none;
+    user-select: text;
     overflow-x: hidden;
 }
 
@@ -708,3 +708,10 @@ label {
     color: #9CA9AF;
     font-family: Roboto, sans-serif;
 }
+
+::selection {
+    background-color: rgba(255, 0, 255, 0.248); 
+    text-shadow: #ffffff 0 0 10px;
+    color: rgb(255, 255, 255); 
+  }
+  

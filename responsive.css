@@ -319,6 +319,32 @@
         font-size: 15px;
     }
 
+    #about-us .container ol {
+        padding: 0;
+        width: 100%;
+    }
+    
+    #about-us li {
+        width: 100%;
+        height: 100px;
+        padding: 20px;
+        font-size: 15px;
+    }
+
+    .price-card:hover, #about-us li:hover {
+        transform: none;
+    }
+    
+    #about-us li span {
+        font-weight: 300;
+        font-size: 17px;
+    }
+
+    #about-us li strong {
+        font-size: 15px;
+    }
+    
+
     footer {
         position: relative;
         display: flex;
