@@ -40,7 +40,7 @@ h3 {
 }
 
 h4 {
-    color: #9a9292;
+    color: #9CA9AF;
     font-family: 'M PLUS 1p', sans-serif;
     font-weight: 400;
 }
@@ -247,7 +247,7 @@ nav ul li a.active::after {
 
 .price-card-description {
     position: absolute;
-    color: #686262;
+    color: #9CA9AF;
     font-family: Roboto, sans-serif;
     bottom: 75px;
 }
@@ -584,7 +584,7 @@ nav ul li a.active::after {
     height: 125px;
     border: 1px solid #FFF;
     border-radius: 20px;
-    color: #9a9292;
+    color: #9CA9AF;
     font-family: 'M PLUS 1p', sans-serif;
     font-weight: 400;
     transition: transform .3s ease, box-shadow .3s ease;
@@ -705,6 +705,6 @@ label {
 
 .example-description,
 .order-description {
-    color: #686262;
+    color: #9CA9AF;
     font-family: Roboto, sans-serif;
 }
