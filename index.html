@@ -101,7 +101,7 @@
             <h1 class="calculator-title">Розрахунок ціни на сайт:</h1>
             <form id="calculatorForm">
                 <div class="select-enter">
-                    <label class="label-select-enter">Тип сайту:</label>
+                    <label class="label-select-enter" for="siteType">Тип сайту:</label>
                     <select id="siteType">
                         <option value="1000">Лендінгова сторінка</option>
                         <option value="2500">Корпоративний сайт</option>
@@ -120,7 +120,7 @@
 
                     </select>
                     <div class="pages">
-                        <label class="label-select-enter">Кількість сторінок:</label>
+                        <label class="label-select-enter" for="pageCount">Кількість сторінок:</label>
                         <input type="number" id="pageCount" min="1" value="1">
                     </div>
                 </div>
@@ -231,7 +231,7 @@
                     <input type="text" id="website" name="website" placeholder="Вебсайт компанії">
 
                     <input type="text" id="situation" name="situation" placeholder="Додайте опис">
-
+                    <label for="service"></label>
                     <select id="service" name="service" required>
                         <option value="" disabled selected>Оберіть послугу</option>
                         <option value="Лендінгова сторінка">Лендінгова сторінка</option>
@@ -250,7 +250,7 @@
                         <option value="Сайт для заходів">Сайт для заходів</option>
                         <option value="Інше">Інше</option>
                     </select>
-
+                    <label for="file"></label>
                     <input type="file" name="file" class="file-order" id="file" />
                     <div class="input-file">
                         <div class="img-add-file">
