@@ -12,13 +12,19 @@
         "link": "https://belikovvvartem.github.io/Nike/"
     },
     {
-        "image": "src/img/portfolio/portfolio-desing-agency.jpg",
+        "image": "src/img/portfolio/portfolio-buring-men.png",
+        "title": "BURING MEN",
+        "description": "Сайт Burning Man для <br> бронювання квитків на заходи.",
+        "link": "https://belikovvvartem.github.io/Burning-MAN//"
+    },
+    {
+        "image": "src/img/portfolio/portfolio-desing-agency.png",
         "title": "Desing Agency",
         "description": "Агенція зі створення кастомних <br> вебсайтів.",
         "link": "https://belikovvvartem.github.io/Smart-Web--Design-Agency/"
     },
     {
-        "image": "src/img/portfolio/portfolio-webstudio.jpg",
+        "image": "src/img/portfolio/portfolio-webstudio.png",
         "title": "WebStudio",
         "description": "Вебстудія: ефективні сайти для <br> бізнесу.",
         "link": "https://belikovvvartem.github.io/WebStudio/"
