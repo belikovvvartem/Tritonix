@@ -1,0 +1,14 @@
+{
+    "name": "Tritonix",
+    "short_name": "Додаток",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "/google-favicon.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ]
+  }
+  

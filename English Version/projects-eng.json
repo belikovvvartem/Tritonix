@@ -2,25 +2,37 @@
     {
         "image": "src/img/portfolio/portfolio-school.png",
         "title": "School",
-        "description": "Сайт школи з новинами <br> та адмініструванням.",
+        "description": "A school website with news <br> and administration.",
         "link": "https://belikovvvartem.github.io/School/"
     },
     {
         "image": "src/img/portfolio/portfolio-color-rawe.jpg",
         "title": "NIKE",
-        "description": "Для продажу кастомізованих <br> кросівок Nike.",
+        "description": "For selling customized <br> Nike sneakers.",
         "link": "https://belikovvvartem.github.io/Nike/"
     },
     {
-        "image": "src/img/portfolio/portfolio-desing-agency.jpg",
+        "image": "src/img/portfolio/portfolio-webstudio.png",
+        "title": "WebStudio",
+        "description": "A web studio: effective websites <br> for businesses.",
+        "link": "https://belikovvvartem.github.io/WebStudio/"
+    },
+    {
+        "image": "src/img/portfolio/portfolio-buring-men.png",
+        "title": "BURING MEN",
+        "description": "A Burning Man website for <br> event ticket booking.",
+        "link": "https://belikovvvartem.github.io/Burning-MAN//"
+    },
+    {
+        "image": "src/img/portfolio/portfolio-desing-agency.png",
         "title": "Desing Agency",
-        "description": "Агенція зі створення кастомних <br> вебсайтів.",
+        "description": "An agency for creating custom <br> websites.",
         "link": "https://belikovvvartem.github.io/Smart-Web--Design-Agency/"
     },
     {
-        "image": "src/img/portfolio/portfolio-webstudio.jpg",
-        "title": "WebStudio",
-        "description": "Вебстудія: ефективні сайти для <br> бізнесу.",
-        "link": "https://belikovvvartem.github.io/WebStudio/"
+        "image": "src/img/portfolio/portfolio-tritonix.png",
+        "title": "TRITONIX",
+        "description": "A studio for website creation <br> TRITONIX.",
+        "link": "https:/tritonix.site/"
     }
 ]
