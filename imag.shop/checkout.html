@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>IMAG • Замовлення</title>
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+    
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html">IMAG • Замовлення</a></h1>
+        <nav>
+            <ul>
+                <li><a href="category.html?category=iphone">iPhone</a></li>
+                <li><a href="category.html?category=mac">Mac</a></li>
+                <li><a href="category.html?category=ipad">iPad</a></li>
+                <li><a href="category.html?category=airpods">AirPods</a></li>
+                <li><a href="category.html?category=watch">Apple Watch</a></li>
+                <li><a href="category.html?category=accessories">Akcu</a></li>
+                <li><a href="category.html?category=dyson">Dyson</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="products.html">Товари</a></li>
+                <li><a href="./cart.html">Кошик</a></li>    
+            </ul>
+        </nav>
+        <a href="./index.html" class="button-back"><img src="./src/img/login-button-back.png" alt=""></a>
+    </header>
+    <main>
+        <form id="checkout-form">
+            <label for="fullName">Ім’я та прізвище:</label>
+            <input type="text" id="fullName" required>
+            <label for="phone">Номер телефону:</label>
+            <input type="tel" id="phone" required>
+            <label for="wishes">Побажання (необов’язково):</label>
+            <textarea id="wishes"></textarea>
+            <button type="submit">Підтвердити замовлення</button>
+        </form>
+        <div id="order-summary"></div>
+    </main>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
