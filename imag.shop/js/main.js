@@ -265,5 +265,21 @@ if (window.location.pathname.endsWith('index.html') || window.location.pathname 
     handleLogin();
 }
 
+
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "F12" || 
+        (event.ctrlKey && event.shiftKey && event.key === "I") || 
+        (event.ctrlKey && event.shiftKey && event.key === "J") || 
+        (event.ctrlKey && event.key === "U")) {
+        event.preventDefault();
+    }
+});
+
+document.addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+});
+
+
 // Перевірка доступу до адмін-панелі
 checkAdminAccess();
