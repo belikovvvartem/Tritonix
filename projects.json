@@ -21,7 +21,7 @@
         "image": "src/img/portfolio/portfolio-fitnes.png",
         "title": "Fitnes",
         "description": "Сайт для реклами фітнес-програм <br> Fitness Online.",
-        "link": "https://belikovvvartem.github.io/Burning-MAN//"
+        "link": "https://belikovvvartem.github.io/fitness-online/"
     },
     {
         "image": "src/img/portfolio/portfolio-desing-agency.png",
@@ -39,24 +39,24 @@
         "image": "src/img/portfolio/portfolio-imag.png",
         "title": "iMag",
         "description": "Сайт для реклами магазину <br> техніки Apple iMag.",
-        "link": "https:/tritonix.site/"
+        "link": "https://belikovvvartem.github.io/iMag/"
     },
     {
         "image": "src/img/portfolio/portfolio-buring-men.png",
         "title": "BURING MEN",
         "description": "Сайт Burning Man для бронювання <br> квитків на заходи.",
-        "link": "https:/tritonix.site/"
+        "link": "https://belikovvvartem.github.io/Burning-MAN/"
     },
     {
         "image": "src/img/portfolio/portfolio-nice-view.png",
         "title": "Nice View",
         "description": "Сайт для реклами житлового <br> комплексу Nice View.",
-        "link": "https:/tritonix.site/"
+        "link": "https://belikovvvartem.github.io/Nice-view/"
     },
     {
         "image": "src/img/portfolio/portfolio-yaht.png",
         "title": "Yacht Adventures",
         "description": "Сайт для реклами оренди яхт <br> Yacht Adventures.",
-        "link": "https:/tritonix.site/"
+        "link": "https://belikovvvartem.github.io/Yacht-Adventures/"
     }
 ]
